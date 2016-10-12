@@ -12,6 +12,7 @@
         echo "<pre>";
         var_dump($events);
         echo "</pre>";
+        exit();
         // Loop through each event
         foreach ($events['events'] as $event) {
             // Reply only when message sent is in 'text' format
@@ -50,5 +51,5 @@
                 echo $result . "\r\n";
             }
         }
-}
+    }
 echo "OK";
