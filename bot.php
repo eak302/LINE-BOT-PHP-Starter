@@ -9,6 +9,9 @@
     $events = json_decode($content, true);
     // Validate parsed JSON data
     if (!is_null($events['events'])) {
+        echo "<pre>";
+        var_dump($events);
+        echo "</pre>";
         // Loop through each event
         foreach ($events['events'] as $event) {
             // Reply only when message sent is in 'text' format
