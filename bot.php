@@ -10,15 +10,25 @@
     //$proxyauth = 'eak302.com:abcd028623112';
 
     // Get POST body content
-    $content = $_POST;
+    //$content = $_POST;
+    $arr = array(
+        'events'=>array(
+            'type'=>'message',
+            'message'=>array(
+                'type'=>'text',
+                'text'=>'testtext'
+            )
+        )
+    );
+    $content = $arr;
     //$content = file_get_contents('php://input');
     // Parse JSON
     $events = json_decode($content, true);
     // Validate parsed JSON data
 
-    echo "<pre>";
-    var_dump($content);
-    echo "</pre>";
+    //echo "<pre>";
+    var_dump($events);
+    //echo "</pre>";
     exit();
 
     if (!is_null($events['events'])) {
