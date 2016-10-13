@@ -69,13 +69,17 @@
     // Parse JSON
     $events = json_decode($content, true);
 
-    $file = 'test.txt';
+    //$file = 'test.txt';
     //$current = file_get_contents($content);
     //$current .= "John Smith\n";
-    file_put_contents($file, $content);
+    //file_put_contents($file, $content);
 
 
-    var_dump($content);
+    //var_dump($content);
+
+    $file = fopen("test.txt","w");
+    echo fwrite($file,"Hello World. Testing!");
+    fclose($file);
 
     // Validate parsed JSON data
 
