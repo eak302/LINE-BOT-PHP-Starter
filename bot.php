@@ -12,7 +12,7 @@
 
     // Get POST body content
     //$content = $_POST;
-    $arr = array(
+    /*$arr = array(
         'events'=>array([
             'replyToken'=>'nHuyWiB7yP5Zw52FIkcQobQuGDXCTA',
             'type'=>'message',
@@ -27,7 +27,7 @@
                 'text'=>'Hello World'
             )
         ])
-    );
+    );*/
     /*$content = '{
       "events": [
           {
@@ -77,9 +77,9 @@
 
     //var_dump($content);
 
-    $file = fopen("test.txt","w");
-    echo fwrite($file,"Hello World. Testing!");
-    fclose($file);
+    //$file = fopen("test.txt","w");
+    //echo fwrite($file,"Hello World. Testing!");
+    //fclose($file);
 
     // Validate parsed JSON data
 
