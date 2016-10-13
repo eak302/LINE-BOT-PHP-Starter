@@ -27,23 +27,16 @@
     // Validate parsed JSON data
 
     foreach ($events['events'] as $event) {
+        
         var_dump($event);
-    }
-
-
-    if (!is_null($events['events'])) {
         
-        
-        
-        // Loop through each event
-        foreach ($events['events'] as $event) {
-            
-            echo "<pre>";
-            var_dump($events);
-            echo "</pre>";
-            exit();
-            
-            
+        if ($events['type'] == 'message' && $events['message']['type'] == 'text') {
+                
+                echo "true";
+                exit();
         }
     }
+
+
+    
 echo "OK";
