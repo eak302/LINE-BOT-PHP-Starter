@@ -30,7 +30,7 @@
         
         var_dump($event);
         
-        if ($events['type'] == 'message' && $events['message']['type'] == 'text') {
+        if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
                 
                 echo "true";
                 exit();
