@@ -39,7 +39,7 @@
         foreach ($events['events'] as $event) {
             
             echo "<pre>";
-            var_dump($event);
+            var_dump($events);
             echo "</pre>";
             exit();
             
