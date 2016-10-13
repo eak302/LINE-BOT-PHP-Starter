@@ -16,10 +16,10 @@
     $events = json_decode($content, true);
     // Validate parsed JSON data
 
-    echo "<pre>";
+    /*echo "<pre>";
     var_dump($content);
     echo "</pre>";
-    exit();
+    exit();*/
 
     if (!is_null($events['events'])) {
         
