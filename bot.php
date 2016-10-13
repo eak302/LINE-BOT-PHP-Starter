@@ -101,7 +101,7 @@
                 // Build message to reply back
                 $messages = [
                     'type' => 'text',
-                    'text' => 'xxxxxx'.$text
+                    'text' => $text
                 ];
 
                 // Make a POST Request to Messaging API to reply to sender
