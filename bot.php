@@ -40,7 +40,7 @@
             
             //var_dump($events);
             //exit();
-            echo $event['type'];
+            echo $event['message']['type'];
             exit();
             
             // Reply only when message sent is in 'text' format
