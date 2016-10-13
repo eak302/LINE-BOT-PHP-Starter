@@ -28,11 +28,7 @@
 
     foreach ($events['events'] as $event) {
         
-        //var_dump($event);
-        echo $events['type'];
-        echo "<br>";
-        echo $event['message']['type'];
-        exit();
+        
         
         if ($events['events']['type'] == 'message' && $events['events']['message']['type'] == 'text')
         {
