@@ -27,7 +27,7 @@
     // Validate parsed JSON data
 
     //echo "<pre>";
-    var_dump($events);
+    var_dump($content);
     //echo "</pre>";
     exit();
 
