@@ -1,5 +1,6 @@
 <?php
 
+    echo Request::all();
     /*$content = $_POST;
     var_dump($content);
     exit();*/
