@@ -77,7 +77,7 @@
 
     //var_dump($content);
 
-    header("location: http://dentsu360.net/demo/temp/save.php?replytoken=test&type=message");
+    //header("location: http://dentsu360.net/demo/temp/save.php?replytoken=test&type=message");
 
     // Validate parsed JSON data
 
@@ -85,6 +85,9 @@
     {
         foreach ( $events['events'] as $event )
         {
+            
+            header("location: http://dentsu360.net/demo/temp/save.php?replytoken=".$event['replyToken']."&type=message");
+            
             // Reply only when message sent is in 'text' format
             if ($event['type'] == 'message' && $event['message']['type'] == 'text')
             {
