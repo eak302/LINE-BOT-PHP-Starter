@@ -79,6 +79,9 @@
 
     //header("location: http://dentsu360.net/demo/temp/save.php?replytoken=test&type=message");
 
+    echo 'event';
+    exit();
+
     // Validate parsed JSON data
 
     if(!is_null($events['events']))
@@ -127,4 +130,4 @@
         }
     }
     
-echo "OK".json_encode($content);
+//echo "OK".json_encode($content);
