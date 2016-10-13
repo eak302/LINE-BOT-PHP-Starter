@@ -15,8 +15,14 @@
     // Validate parsed JSON data
 
     //echo "<pre>";
-    var_dump($content);
+    //var_dump($content);
     //echo "</pre>";
-    exit();
+
+    foreach ($events['events'] as $event) {
+        var_dump($event);
+    }
+
+
+    //exit();
 
 ?>
