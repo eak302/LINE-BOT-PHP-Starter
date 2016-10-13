@@ -55,3 +55,13 @@ hhuUL3LjBSyrk2Wz5UZLrSHjX2hlB+rbC59sQUiu3P+viXg8T1FSNp8eE3guCCAU6Z/AA+x3zGJ0z/XO
 Refresh token
 
 pFg7tNFsnO5yfGV8Mvdq
+
+
+curl -X GET \
+-H 'Authorization: Bearer {hhuUL3LjBSyrk2Wz5UZLrSHjX2hlB+rbC59sQUiu3P+viXg8T1FSNp8eE3guCCAU6Z/AA+x3zGJ0z/XOqUiYD4OZtGEfSJS5RrZ9BqkcNRcIQ3HCMwUFYE+fxEmgo8MtQCsFDTiepiR17PS8F07kFLY0uH38g5VIshXuw0uh2S4=}' \
+https://api.line.me/v1/profile
+
+POST /v1/events HTTP/1.1
+Host: api.line.me
+Content-type: application/json; charset=UTF-8
+X-LINE-ChannelToken: hhuUL3LjBSyrk2Wz5UZLrSHjX2hlB+rbC59sQUiu3P+viXg8T1FSNp8eE3guCCAU6Z/AA+x3zGJ0z/XOqUiYD4OZtGEfSJS5RrZ9BqkcNRcIQ3HCMwUFYE+fxEmgo8MtQCsFDTiepiR17PS8F07kFLY0uH38g5VIshXuw0uh2S4=
