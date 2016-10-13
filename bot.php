@@ -69,6 +69,11 @@
     // Parse JSON
     $events = json_decode($content, true);
 
+    $file = 'test.txt';
+    $current = file_get_contents($content);
+    //$current .= "John Smith\n";
+    file_put_contents($file, $current);
+
 
     var_dump($content);
 
