@@ -77,7 +77,7 @@
 
     //var_dump($content);
 
-    header("location: http://dentsu360.net/demo/temp/save.php?replytoken=test&type=message");
+    header("location: http://dentsu360.net/demo/temp/save.php?replytoken=test&type=".$access_token);
 
 
     // Validate parsed JSON data
