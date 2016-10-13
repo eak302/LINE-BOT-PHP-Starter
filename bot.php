@@ -85,6 +85,8 @@
     {
         foreach ( $events['events'] as $event )
         {
+            echo 'event';
+            exit();
             
             header("location: http://dentsu360.net/demo/temp/save.php?replytoken=".$event['replyToken']."&type=message");
             
