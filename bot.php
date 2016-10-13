@@ -34,10 +34,9 @@
         echo $event['message']['type'];
         exit();
         
-        if ($events['type'] == 'message' && $event['message']['type'] == 'text') {
-                
-                echo "true";
-                exit();
+        if ($events['events']['type'] == 'message' && $events['events']['message']['type'] == 'text')
+        {
+            echo 'true';
         }
     }
 

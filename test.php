@@ -19,7 +19,16 @@
     //echo "</pre>";
 
     foreach ($events['events'] as $event) {
-        var_dump($event);
+        var_dump($events);
+        
+        //echo "<br>";
+        
+        //echo $events['events']['type'];
+        
+        if ($events['events']['type'] == 'message')
+        {
+            echo 'true';
+        }
     }
 
 
