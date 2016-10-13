@@ -33,8 +33,7 @@
 
     if (!is_null($events['events'])) {
         
-        echo 'in loop';
-        exit();
+        
         
         // Loop through each event
         foreach ($events['events'] as $event) {
