@@ -20,14 +20,14 @@
             )
         )
     );
-    $content = $arr;
+    $content = json_encode($arr);
     //$content = file_get_contents('php://input');
     // Parse JSON
     $events = json_decode($content, true);
     // Validate parsed JSON data
 
     //echo "<pre>";
-    var_dump($content);
+    var_dump($events);
     //echo "</pre>";
     exit();
 
