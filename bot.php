@@ -38,21 +38,21 @@
         // Loop through each event
         foreach ($events['events'] as $event) {
             
-            echo "<pre>";
-            var_dump($events);
-            echo "</pre>";
-            exit();
+            //echo "<pre>";
+            //var_dump($events);
+            //echo "</pre>";
+            //exit();
             
             // Reply only when message sent is in 'text' format
-            if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
+            if ($events['type'] == 'message' && $events['message']['type'] == 'text') {
                 
                 echo "true";
                 exit();
                 
                 // Get text sent
-                $text = $event['message']['text'];
+                $text = $events['message']['text'];
                 // Get replyToken
-                $replyToken = $event['replyToken'];
+                $replyToken = $events['replyToken'];
 
                 // Build message to reply back
                 $messages = [
