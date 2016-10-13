@@ -77,9 +77,33 @@
 
     //var_dump($content);
 
-    //$file = fopen("test.txt","w");
-    //echo fwrite($file,"Hello World. Testing!");
-    //fclose($file);
+    $replytoken = 'nHuyWiB7yP5Zw52FIkcQobQuGDXCTA';
+    $type = 'message';
+
+    $connect = mysql_connect('124.109.1.201', 'dentsu360_dev1', 'passw0rd#') or die ('Error Connect to Database');
+    $db = mysql_select_db('dentsu360_aissimlove');
+    $sql = 'INSERT INTO customer (replytoken, type) VALUES ("'.$replytoken.'", "'.$type.'")';
+    mysql_query("SET NAMES UTF8");
+    $query = mysql_query($sql);
+    
+    if ( $query )
+    {
+        
+        echo 'save done';
+        exit();
+        //header( "location: thank.html" );
+        //exit(0);
+    }
+    else 
+    {
+        echo 'save false';
+        exit();
+        //echo '<script type="text/javascript">alert("มีปัญหาเกี่ยวกับระบบ กรุณากรอกข้อมูลซ้ำอีกครั้ง")</script>';
+        //header('Location: ' . $_SERVER['HTTP_REFERER']);
+        //exit();
+    }
+
+    mysql_close($connect);
 
     // Validate parsed JSON data
 
