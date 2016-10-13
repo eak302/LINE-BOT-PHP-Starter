@@ -39,3 +39,19 @@ curl -X POST \
         }
     ]
 }' https://api.line.me/v2/bot/message/reply
+
+
+curl -X GET \
+-H 'Authorization: Bearer {hhuUL3LjBSyrk2Wz5UZLrSHjX2hlB+rbC59sQUiu3P+viXg8T1FSNp8eE3guCCAU6Z/AA+x3zGJ0z/XOqUiYD4OZtGEfSJS5RrZ9BqkcNRcIQ3HCMwUFYE+fxEmgo8MtQCsFDTiepiR17PS8F07kFLY0uH38g5VIshXuw0uh2S4=}' \
+https://api.line.me/v1/oauth/verify
+
+
+Access token
+
+hhuUL3LjBSyrk2Wz5UZLrSHjX2hlB+rbC59sQUiu3P+viXg8T1FSNp8eE3guCCAU6Z/AA+x3zGJ0z/XOqUiYD4OZtGEfSJS5RrZ9BqkcNRcIQ3HCMwUFYE+fxEmgo8MtQCsFDTiepiR17PS8F07kFLY0uH38g5VIshXuw0uh2S4=
+
+
+
+Refresh token
+
+pFg7tNFsnO5yfGV8Mvdq
