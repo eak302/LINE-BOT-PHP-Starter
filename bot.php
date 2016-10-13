@@ -63,8 +63,8 @@
           }
       ]
     }';*/
-    //$content = json_encode($arr);
-    $content = file_get_contents('php://input');
+    $content = json_encode($arr);
+    //$content = file_get_contents('php://input');
     // Parse JSON
     $events = json_decode($content, true);
     // Validate parsed JSON data
@@ -84,7 +84,7 @@
                 // Build message to reply back
                 $messages = [
                     'type' => 'text',
-                    'text' => $text
+                    'text' => 'xxxxxx'.$text
                 ];
 
                 // Make a POST Request to Messaging API to reply to sender
