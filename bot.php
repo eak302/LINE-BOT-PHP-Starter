@@ -114,4 +114,4 @@
         }
     }
     
-echo "OK";
+echo "OK".json_encode($content);
