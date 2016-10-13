@@ -1,6 +1,6 @@
 <?php
 
-    echo Request::all();
+    //echo Request::all();
     /*$content = $_POST;
     var_dump($content);
     exit();*/
@@ -70,9 +70,9 @@
     $events = json_decode($content, true);
 
     $file = 'test.txt';
-    $current = file_get_contents($content);
+    //$current = file_get_contents($content);
     //$current .= "John Smith\n";
-    file_put_contents($file, $current);
+    file_put_contents($file, $content);
 
 
     var_dump($content);
