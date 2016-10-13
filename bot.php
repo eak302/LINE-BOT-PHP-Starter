@@ -12,39 +12,80 @@
     // Get POST body content
     //$content = $_POST;
     $arr = array(
-        'events'=>array(
+        'events'=>array([
+            'replyToken': 'nHuyWiB7yP5Zw52FIkcQobQuGDXCTA',
             'type'=>'message',
+            'timestamp'=>1462629479859,
+            'source'=>(
+                'type': 'user',
+                'userId': 'U206d25c2ea6bd87c17655609a1c37cb8'
+            ),
             'message'=>array(
+                'id'=>'325708',
                 'type'=>'text',
-                'text'=>'testtext'
+                'text'=>'Hello World'
             )
-        )
+        ])
     );
+    /*$content = '{
+      "events": [
+          {
+            "replyToken": "nHuyWiB7yP5Zw52FIkcQobQuGDXCTA",
+            "type": "message",
+            "timestamp": 1462629479859,
+            "source": {
+                 "type": "user",
+                 "userId": "U206d25c2ea6bd87c17655609a1c37cb8"
+             },
+             "message": {
+                 "id": "325708",
+                 "type": "text",
+                 "text": "Hello, world"
+              }
+          }
+      ]
+    }';*/
+    /*$content = '{
+      "events": [
+          {
+            "replyToken": "nHuyWiB7yP5Zw52FIkcQobQuGDXCTA",
+            "type": "message",
+            "timestamp": 1462629479859,
+            "source": {
+                 "type": "user",
+                 "userId": "U206d25c2ea6bd87c17655609a1c37cb8"
+             },
+             "message": {
+                 "id": "325708",
+                 "type": "text",
+                 "text": "Hello, world"
+              }
+          }
+      ]
+    }';*/
     $content = json_encode($arr);
     //$content = file_get_contents('php://input');
     // Parse JSON
     $events = json_decode($content, true);
     // Validate parsed JSON data
 
-    foreach ($events['events'] as $event) {
-        
-        
-        
-        if ($events['events']['type'] == 'message' && $events['events']['message']['type'] == 'text')
+    if(!is_null($events['events']))
+    {
+        foreach ( $events['events'] as $event )
         {
-            echo 'true';
-            
-            
-            // Get text sent
-            $text = $events['events']['message']['text'];
-            // Get replyToken
-            $replyToken = $events['events']['replyToken'];
+            // Reply only when message sent is in 'text' format
+            if ($event['type'] == 'message' && $event['message']['type'] == 'text')
+            {
+                // Get text sent
+                $text = $event['message']['text'];
+                // Get replyToken
+                $replyToken = $event['replyToken'];
 
-            // Build message to reply back
-            $messages = [
-                'type' => 'text',
-                'text' => $text
-            ];
+                // Build message to reply back
+                $messages = [
+                    'type' => 'text',
+                    'text' => $text
+                ];
 
                 // Make a POST Request to Messaging API to reply to sender
                 $url = 'https://api.line.me/v2/bot/message/reply';
@@ -61,15 +102,12 @@
                 curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
                 curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
                 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-                curl_setopt($ch, CURLOPT_PROXY, $proxy);
-                curl_setopt($ch, CURLOPT_PROXYUSERPWD, $proxyauth);
                 $result = curl_exec($ch);
                 curl_close($ch);
 
                 echo $result . "\r\n";
+            }
         }
     }
-
-
     
-echo "OK";
+//echo "OK";
