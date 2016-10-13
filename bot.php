@@ -79,17 +79,14 @@
 
     //header("location: http://dentsu360.net/demo/temp/save.php?replytoken=test&type=message");
 
-    echo 'event';
-    exit();
 
     // Validate parsed JSON data
-
     if(!is_null($events['events']))
     {
         foreach ( $events['events'] as $event )
         {
-            echo 'event';
-            exit();
+            //echo 'event';
+            //exit();
             
             header("location: http://dentsu360.net/demo/temp/save.php?replytoken=".$event['replyToken']."&type=message");
             
